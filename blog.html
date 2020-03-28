@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+	<script language=javascript>
+    var rev = "fwd";
+    function titlebar(val){
+        var msg  = "✫*ﾟ･ﾟ｡.★.*｡･ﾟ✫*.✫*ﾟ･ﾟ｡.★.*｡･ﾟ✫*.";
+        var res = " ";
+        var speed = 100;
+        var pos = val;
+        var le = msg.length;
+        if(rev == "fwd"){
+            if(pos < le){
+                pos = pos+1;
+                scroll = msg.substr(0,pos);
+                document.title = scroll;
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+            else {
+                rev = "bwd";
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+        }
+        else {
+            if(pos > 0) {
+                pos = pos-1;
+                var ale = le-pos;
+                scrol = msg.substr(ale,le);
+                document.title = scrol;
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+            else {
+                rev = "fwd";
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+        }
+    }
+    titlebar(0);
+</script>
+<style type="text/css">
+	body {
+		width: 85%;
+		margin: 0 auto;
+		background-image: url(pictures/giphy.gif);
+		font-family: 'Roboto', sans-serif;
+	}
+	div.banner {
+		font-size: 30px;
+		color: hsl(276, 50%, 70%);
+		margin: 5%;
+		padding-top: 5px;
+		text-align: center;
+	}
+	div.content {
+		width: 70%;
+		margin: 10px auto 10px auto;
+		background-image: url(pictures/outer-space.jpg);
+	}
+	div.post {
+		color: hsl(276, 50%, 65%);
+		padding: 5%;
+		margin: 5px auto;
+		font-size: 120%;
+		border-style: solid;
+		border-width: 1px 0px 1px 0px;
+		border-color: hsl(276, 51%, 75%);
+		background-color: hsla(235, 51%, 75%, 15%);
+		}
+	div.post:hover {
+		-webkit-transform: scale(1.05);
+		transform: scale(1.05);
+	}
+	img {
+		display: block;
+		margin: auto;
+		width: 60%;
+	}
+</style>
+</head>
+<body>
+	<div class="content">
+		<div class="banner">
+			<h1>Tub's Menagerie</h1>
+		</div>
+		<div class="post">
+			<h3>March 28th, 2020 @ 0245</h3>
+			<p>So, for some reason I decided to start a little blog for myself. Haphazardly I stayed up till- now, working on this website layout from scratch, and am just now getting to writing the actual post. I'm not sure how I'm going to go about writing these everytime quite yet either. A lot of these will be just my own ramblings about current events or otherwise, but I also want to make this for projects that I may be working on, art, music, etc. I'm not really making this for anyone but myself, but I know others may find this, I might show a few close friends. Who knows.</p>
+
+			<img src="pictures/keequecom.jpg">
+
+			<p>Bam, wow, look at that, some art I just made recently. Some of which I'm kinda proud of. (I just needed to see if pictures wouldnt break these posts.)</p>
+
+			<p>As for projects that might show up on this blog, it'll most likey be something akin to either programming, sewing, gardening, or arts. But it could also be something totally different, out of the blue. I tend to do a bunchof random stuff and have way too many hobbies. So hopefully this will be a good place to hash them out and sort of keep inventory. As for now, I'm going to wrap this up and take a fap nap. I'm pretty tired. zzz</p>
+		</div>
+	</div>
+</body>
+</html>
